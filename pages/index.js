@@ -1,11 +1,52 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
+import styles from '@/styles/Home.module.css';
+import thumb from '@/imgs/thumb.png';
+import spare from '@/imgs/trending/spare.jpg';
+import covenant from '@/imgs/trending/The-covenant.jpg';
+import hello from '@/imgs/trending/hello.jpg';
+import fourth from '@/imgs/Fourth.jpg';
+import a_Curse from '@/imgs/A-curse.jpg';
+import house from '@/imgs/house.jpg';
+import { useEffect } from 'react';
+import Link from 'next/link';
+import Card from '@/components/Card';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  useEffect(() => {
+    const autoplay = () => {
+      setTimeout(() =>{
+      const nextBtn = document.querySelector(".carousel-control-next");
+      if(nextBtn)
+      {
+        nextBtn.click();
+      }
+     
+      
+      }, 6000);
+      }
+      autoplay();
+      // const checkWidth = () => {
+      //   const body = document.querySelector('body');
+      //   const row = document.querySelector('.popular .row').lastChild;
+      //   if(body.offsetWidth > 1228) {
+      //     row.classList.remove('justify-content-center')
+      //   }
+      //   window.addEventListener('resize', () => {
+      //     if(body.offsetWidth > 1228){
+      //       row.classList.remove('justify-content-center')
+      //     } 
+      //     else {
+      //       row.classList.add('justify-content-center')
+      //     }
+      //   })
+      // }
+      // checkWidth();
+  }
+  , [])
   return (
     <>
       <Head>
@@ -14,101 +55,99 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={`${styles.main} ${inter.className}`}>
-        <div className={styles.description}>
-          <p>
-            Get started by editing&nbsp;
-            <code className={styles.code}>pages/index.js</code>
-          </p>
-          <div>
-            <a
-              href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              By{' '}
-              <Image
-                src="/vercel.svg"
-                alt="Vercel Logo"
-                className={styles.vercelLogo}
-                width={100}
-                height={24}
-                priority
-              />
-            </a>
+      <div className='row'>
+        <div className='col-md'>
+        <div className='welcome-section d-flex justify-content-between align-items-center+'>
+          <h4>Welcome back, Abdelhakim Baraka</h4>
+          <Image src={thumb} width={300} height={150} />
+        </div>
+        <div className='popular'>
+          <h1>Popular</h1>
+        <div className='row text-center'>
+        <div className='col-md-4 d-flex justify-content-center'>
+          <Card 
+            image={fourth}
+            title='Fourth Wing'
+            author='Rebecca Yarros
+            '
+            price='12.58'
+          />
+          </div>
+          <div className='col-md-4 d-flex justify-content-center'>
+          <Card 
+            image={a_Curse}
+            title='A Curse for True Love'
+            author='Stephanie Garber'
+            price='12.58'
+          />
+          </div>
+          <div className='col-md-4 d-flex justify-content-center'>
+          <Card 
+            image={covenant}
+            title='The Covenant of Water'
+            author='Abraham Verghese'
+            price='12.58'
+          />  
+          </div>
+          <div className='col-md-4 d-flex justify-content-center'>
+          <Card 
+            image={house}
+            title='House of Sky and Breath'
+            author='Sarah J. Maas'
+            price='12.58'
+          />  
           </div>
         </div>
-
-        <div className={styles.center}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js Logo"
-            width={180}
-            height={37}
-            priority
-          />
+        <Link href='#' className='d-flex justify-content-end'>See more</Link>
         </div>
-
-        <div className={styles.grid}>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Docs <span>-&gt;</span>
-            </h2>
-            <p>
-              Find in-depth information about Next.js features and&nbsp;API.
-            </p>
-          </a>
-
-          <a
-            href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Learn <span>-&gt;</span>
-            </h2>
-            <p>
-              Learn about Next.js in an interactive course with&nbsp;quizzes!
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Templates <span>-&gt;</span>
-            </h2>
-            <p>
-              Discover and deploy boilerplate example Next.js&nbsp;projects.
-            </p>
-          </a>
-
-          <a
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <h2>
-              Deploy <span>-&gt;</span>
-            </h2>
-            <p>
-              Instantly deploy your Next.js site to a shareable URL
-              with&nbsp;Vercel.
-            </p>
-          </a>
         </div>
-      </main>
+        <div className='col-md-4'>
+          <div className='container'>
+            <div className='slider-section'>
+              <h2>Trending</h2>
+            <div id="carouselExampleCaptions" className="carousel slide" style={{width:200, height: "75%", margin:"0 auto", position:'initial'}} data-bs-ride="carousel">
+              
+              <div className="carousel-inner">
+                <div className="carousel-item active">
+                  <Image className='d-block' src={spare} width={200} height={350} />
+                  <div className="carousel-caption d-none d-md-block" style={{position:"initial"}}>
+                  <h5>Spare</h5>
+                  <p>By Prince Harry</p>
+                </div>
+                </div>
+                <div className="carousel-item">
+                <Image className='d-block' src={hello} width={200} height={350} />
+                <div className="carousel-caption d-none d-md-block" style={{position:"initial"}}>
+                  <h5>Hello Beautiful</h5>
+                  <p>By Ann Napolitano</p>
+                </div>
+                </div>
+                <div className="carousel-item">
+                <Image className='d-block' src={covenant} width={200} height={350} />
+                <div className="carousel-caption d-none d-md-block" style={{position:"initial"}}>
+                  <h5>The Covenant of Water</h5>
+                  <p>By Abraham Verghese</p>
+                </div>
+                </div>
+              </div>
+              <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Previous</span>
+              </button>
+              <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                <span className="visually-hidden">Next</span>
+              </button>
+              
+            </div>
+            <div className='slider-seemore'>
+            <Link href='#' >See more</Link>
+            </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
