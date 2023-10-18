@@ -105,25 +105,25 @@ export default function Home() {
           <div className='container'>
             <div className='slider-section'>
               <h2>Trending</h2>
-            <div id="carouselExampleCaptions" className="carousel slide" style={{width:200, height: "75%", margin:"0 auto", position:'initial'}} data-bs-ride="carousel">
+            <div id="carouselExampleCaptions" className="carousel slide" style={{width:250, height: "72%", margin:"0 auto", position:'initial'}} data-bs-ride="carousel">
               
-              <div className="carousel-inner">
+              <div className="carousel-inner mt-5">
                 <div className="carousel-item active">
-                  <Image className='d-block' src={spare} width={200} height={350} />
+                  <Image className='d-block' src={spare} width={250} height={400} />
                   <div className="carousel-caption d-none d-md-block" style={{position:"initial"}}>
                   <h5>Spare</h5>
                   <p>By Prince Harry</p>
                 </div>
                 </div>
                 <div className="carousel-item">
-                <Image className='d-block' src={hello} width={200} height={350} />
+                <Image className='d-block' src={hello} width={250} height={400} />
                 <div className="carousel-caption d-none d-md-block" style={{position:"initial"}}>
                   <h5>Hello Beautiful</h5>
                   <p>By Ann Napolitano</p>
                 </div>
                 </div>
                 <div className="carousel-item">
-                <Image className='d-block' src={covenant} width={200} height={350} />
+                <Image className='d-block' src={covenant} width={250} height={400} />
                 <div className="carousel-caption d-none d-md-block" style={{position:"initial"}}>
                   <h5>The Covenant of Water</h5>
                   <p>By Abraham Verghese</p>
