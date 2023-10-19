@@ -12,6 +12,7 @@ import house from '@/imgs/house.jpg';
 import { useEffect } from 'react';
 import Link from 'next/link';
 import Card from '@/components/Card';
+import Layout from '@/components/Layout';
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -55,8 +56,9 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+      <Layout>
       <div className='row'>
-        <div className='col-md'>
+        <div className='col-lg-8'>
         <div className='welcome-section d-flex justify-content-between align-items-center+'>
           <h4>Welcome back, Abdelhakim Baraka</h4>
           <Image src={thumb} width={300} height={150} />
@@ -101,7 +103,7 @@ export default function Home() {
         <Link href='#' className='d-flex justify-content-end'>See more</Link>
         </div>
         </div>
-        <div className='col-md-4'>
+        <div className='col-lg-4'>
           <div className='container'>
             <div className='slider-section'>
               <h2>Trending</h2>
@@ -148,6 +150,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      </Layout>
     </>
   )
 }

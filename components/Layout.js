@@ -1,5 +1,5 @@
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import {AiOutlineHome, AiOutlineShoppingCart} from 'react-icons/ai';
 import {RiCompassDiscoverLine} from 'react-icons/ri';
 import {BsBookmarkCheck} from 'react-icons/bs';
@@ -9,6 +9,14 @@ import Logo from '@/imgs/logo.svg'
 import Image from "next/image";
 
 const Layout = ({children}) => {
+    // useEffect(() => {
+    //     const token = localStorage.getItem('token');
+    //     if(!token)
+    //     {
+    //         location.replace('/login')
+    //     }
+    // },
+    // [])
     return(
         <>
         <div className="top-nav d-flex justify-content-end">
@@ -19,13 +27,14 @@ const Layout = ({children}) => {
                         <BiSearchAlt color="#949494" fontSize={23}/>
                     </button>
                 </div>
-                <div className="profile-icon d-flex align-items-center">
+                <div className="profile-icon d-flex align-items-center justify-content-around" style={{width:'10%'}}>
                     <div className="checkout-icon">
                         <Link href='#'>
-                        <AiOutlineShoppingCart color="#949494"  fontSize={30}/>
+                        {/* <AiOutlineShoppingCart color="#949494"  fontSize={30}/> */}
+                        <i class="fa-light fa-cart-shopping fa-xl"></i>
                         </Link>
                     </div>
-                    <i class="fa-light fa-user fa-2xl"></i>
+                    <i class="fa-light fa-circle-user fa-2xl"></i>
                     {/* <div className="profile-avatar">
                         <BiUser fontSize={35} />
                     </div> */}
@@ -33,7 +42,7 @@ const Layout = ({children}) => {
             </div>
         </div>
         <div className="row" style={{minHeight:'100vh'}}>
-            <div className="col-2">
+            <div className="col-lg-2">
             {/* <nav className="sidebar-nav">
                     <div className="d-flex justify-content-between" style={{flexDirection:'column'}}>
                     <div className="logo">
@@ -124,7 +133,7 @@ const Layout = ({children}) => {
                             </a>
                     </li> */}
                     <li className="login-btn">
-                        <Link href='#'>
+                        <Link href='/login'>
                             <i className="fa-light fa-right-to-bracket icon" />
                             <span className="text nav-text">Login</span>
                         </Link>
@@ -152,8 +161,8 @@ const Layout = ({children}) => {
             </div>
         </nav>
             </div>
-            <div className="col">
-                <div className="container">
+            <div className="col-lg-10 content">
+                <div className="container-fluid">
                 <main style={{marginTop:'6rem'}}>
                     {children}
                 </main>

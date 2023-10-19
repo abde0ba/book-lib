@@ -17,9 +17,7 @@ export default function App({ Component, pageProps }) {
     <link href={solid} rel="stylesheet" />
     <link href={regular} rel="stylesheet" />
     <link href={light} rel="stylesheet" />
-    <Layout>
       <Component {...pageProps} />
-    </Layout>
     </>
     )
 }
