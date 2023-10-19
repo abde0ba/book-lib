@@ -31,10 +31,10 @@ const Layout = ({children}) => {
                     <div className="checkout-icon">
                         <Link href='#'>
                         {/* <AiOutlineShoppingCart color="#949494"  fontSize={30}/> */}
-                        <i class="fa-light fa-cart-shopping fa-xl"></i>
+                        <i className="fa-light fa-cart-shopping fa-xl"></i>
                         </Link>
                     </div>
-                    <i class="fa-light fa-circle-user fa-2xl"></i>
+                    <i className="fa-light fa-circle-user fa-2xl"></i>
                     {/* <div className="profile-avatar">
                         <BiUser fontSize={35} />
                     </div> */}
@@ -74,50 +74,50 @@ const Layout = ({children}) => {
                 </ul>
             </div>
              </nav> */}
-             <nav class="sidebar">
+             <nav className="sidebar">
             <header>
-                <div class="image-text">
-                    <span class="image w-100">
+                <div className="image-text">
+                    <span className="image w-100">
                         <Image src={Logo} alt="Logo" width={50} height={50} />
                        
                     </span>
 
-                    <div class="text logo-text">
-                        <span class="name"></span>
-                        {/* <span class="profession">Logo</span> */}
+                    <div className="text logo-text">
+                        <span className="name"></span>
+                        {/* <span className="profession">Logo</span> */}
                     </div>
                 </div>
 
               
             </header>
 
-            <div class="menu-bar">
-                <div class="menu">
-                    <ul class="menu-links">
-                        <li class="nav-link">
+            <div className="menu-bar">
+                <div className="menu">
+                    <ul className="menu-links">
+                        <li className="nav-link">
                             <a href="#" >
                                 <i className="fa-light fa-house icon" />
-                                <span class="text nav-text">Home</span>
+                                <span className="text nav-text">Home</span>
                             </a>
                         </li>
 
-                        <li class="nav-link">
+                        <li className="nav-link">
                             <a href="#" >
                                 <i className="fa-light fa-compass icon" />
-                                <span class="text nav-text">Discover</span>
+                                <span className="text nav-text">Discover</span>
                             </a>
                         </li>
 
-                        <li class="nav-link">
+                        <li className="nav-link">
                             <a href="#" >
                                 <i className="fa-light fa-bookmark icon" />
-                                <span class="text nav-text">Wishlist</span>
+                                <span className="text nav-text">Wishlist</span>
                             </a>
                         </li>
-                        <li class="nav-link">
+                        <li className="nav-link">
                             <a href="#" >
                                 <i className="fa-light fa-gear icon" />
-                                <span class="text nav-text">Settings</span>
+                                <span className="text nav-text">Settings</span>
                             </a>
                         </li>
 
@@ -125,11 +125,11 @@ const Layout = ({children}) => {
                     </ul>
                 </div>
 
-                <div class="bottom-content">
-                    {/* <li class="">
+                <div className="bottom-content">
+                    {/* <li className="">
                             <a href="../logout.php">
-                                <i class="fa-light fa-right-from-bracket icon"></i>
-                                <span class="text nav-text">Logout</span>
+                                <i className="fa-light fa-right-from-bracket icon"></i>
+                                <span className="text nav-text">Logout</span>
                             </a>
                     </li> */}
                     <li className="login-btn">
@@ -145,15 +145,15 @@ const Layout = ({children}) => {
                         </Link>
                     </li>
 
-                    {/* <li class="mode">
-                        <div class="sun-moon">
-                        <i class="fa-light fa-moon icon moon"></i>
-                            <i class="fa-light fa-sun-bright icon sun"></i>
+                    {/* <li className="mode">
+                        <div className="sun-moon">
+                        <i className="fa-light fa-moon icon moon"></i>
+                            <i className="fa-light fa-sun-bright icon sun"></i>
                         </div>
-                        <span class="mode-text text">Dark mode</span>
+                        <span className="mode-text text">Dark mode</span>
 
-                        <div class="toggle-switch">
-                            <span class="switch"></span>
+                        <div className="toggle-switch">
+                            <span className="switch"></span>
                         </div>
                     </li> */}
                     
