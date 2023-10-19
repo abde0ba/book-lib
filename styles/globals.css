@@ -993,10 +993,10 @@ color: #333;
 }
 /* Responsive Media Query */
 @media (max-width: 991px) {
-  /* .content {
-    margin-left: 10%;
-    width: calc(100% - 16.66666667%);
-  } */
+  .content {
+    margin-left: 88px;
+    width: calc(100% - 88px);
+  }
 .sidebar{
   width: 88px;
 }
@@ -1067,6 +1067,13 @@ nav .profile-details i{
   display: none;
 }
 }
+
+@media (max-width: 540px) {
+  .welcome-section img {
+    width: 100% !important;
+  }
+}
+
 @media (max-width: 400px) {
 .sidebar{
   width: 0;
