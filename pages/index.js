@@ -109,7 +109,7 @@ export default function Home() {
           <Image src={thumb} width={300} height={150} />
         </div>
         </div>
-        <div className='col-lg-4'>
+        <div className='col-lg-4 mb-3 mb-md-0 mb-lg-0 mb-xl-0'>
           
             <div className='slider-section'>
               <h2>Trending</h2>
