@@ -58,7 +58,7 @@ export default function Home() {
       </Head>
       <Layout>
       <div className='row'>
-        <div className='col-lg-8'>
+        <div className='col-lg-8 d-none d-lg-block'>
         <div className='welcome-section d-flex justify-content-between align-items-center+'>
           <h4>Welcome back, Abdelhakim Baraka</h4>
           <Image src={thumb} width={300} height={150} />
@@ -103,8 +103,14 @@ export default function Home() {
         <Link href='#' className='d-flex justify-content-end'>See more</Link>
         </div>
         </div>
+        <div className='col-lg-8 d-block d-lg-none'>
+        <div className='welcome-section d-flex justify-content-between align-items-center+'>
+          <h4>Welcome back, Abdelhakim Baraka</h4>
+          <Image src={thumb} width={300} height={150} />
+        </div>
+        </div>
         <div className='col-lg-4'>
-          <div className='container'>
+          
             <div className='slider-section'>
               <h2>Trending</h2>
             <div id="carouselExampleCaptions" className="carousel slide" style={{width:250, height: "72%", margin:"0 auto", position:'initial'}} data-bs-ride="carousel">
@@ -147,7 +153,49 @@ export default function Home() {
             </div>
             
             </div>
+    
+        </div>
+        <div className='col-lg-8 d-block d-lg-none'>
+      
+        <div className='popular'>
+          <h1>Popular</h1>
+        <div className='row text-center'>
+        <div className='col-md-4 d-flex justify-content-center'>
+          <Card 
+            image={fourth}
+            title='Fourth Wing'
+            author='Rebecca Yarros
+            '
+            price='12.58'
+          />
           </div>
+          <div className='col-md-4 d-flex justify-content-center'>
+          <Card 
+            image={a_Curse}
+            title='A Curse for True Love'
+            author='Stephanie Garber'
+            price='12.58'
+          />
+          </div>
+          <div className='col-md-4 d-flex justify-content-center'>
+          <Card 
+            image={covenant}
+            title='The Covenant of Water'
+            author='Abraham Verghese'
+            price='12.58'
+          />  
+          </div>
+          <div className='col-md-4 d-flex justify-content-center'>
+          <Card 
+            image={house}
+            title='House of Sky and Breath'
+            author='Sarah J. Maas'
+            price='12.58'
+          />  
+          </div>
+        </div>
+        <Link href='#' className='d-flex justify-content-end'>See more</Link>
+        </div>
         </div>
       </div>
       </Layout>

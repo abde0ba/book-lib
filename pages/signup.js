@@ -1,12 +1,18 @@
 import Image from "next/image";
 import React, { useEffect } from "react";
-import Logo from '@/imgs/logo.svg';
+import Logo from '@/imgs/logo.png';
+import Link from "next/link";
 
 const Signup = () => {
    
     return (
         <>
-       <div className="wrapper">
+        <div className="return-btn">
+        <Link href='/'>
+        <i class="fa-light fa-arrow-left-long"></i>
+        </Link>
+        </div>
+       <div className="wrapper login">
     <div className="container_form">
         <div className="credential_form signin">
             <div className="form_content">
@@ -39,23 +45,23 @@ const Signup = () => {
                     <div className="fields column">
                         <div className="field input_field">
                             <label for="">First Name</label>
-                            <input type="text" name="Fname" placeholder="First Name" value="" autocomplete="true" />
+                            <input type="text" name="Fname" placeholder="First Name" autocomplete="true" />
                         </div>
                         <div className="field input_field">
                             <label for="">Last Name</label>
-                            <input type="text" name="Lname" placeholder="Last Name" value="" autocomplete="true" />
+                            <input type="text" name="Lname" placeholder="Last Name" autocomplete="true" />
                         </div>
                     </div>
                     <div className="fields">
                         <div className="field input_field">
                             <label for="">Email</label>
-                            <input type="text" name="email" placeholder="Email Address" value="" autocomplete="true" />
+                            <input type="text" name="email" placeholder="Email Address" autocomplete="true" />
                         </div>
                     </div>
                     <div className="fields">
                         <div className="field input_field">
                             <label for="">Password</label>
-                            <input type="text" name="password" placeholder="Password" value="" />
+                            <input type="text" name="password" placeholder="Password" />
                         </div>
                     </div>
                     {/* <div className="form_link">

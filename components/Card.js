@@ -5,6 +5,7 @@ import {BsFillArrowRightCircleFill} from 'react-icons/bs';
 
 const Card = (props) => {
     return(
+        <Link href='/fourth-wing'>
         <div className='cards'>
             <div className='card-image d-flex justify-content-center'>
               <Image src={props.image} height={200} width={120} alt={props.title} />
@@ -14,12 +15,13 @@ const Card = (props) => {
                 <small>By {props.author}</small>
                 <div className="d-flex justify-content-between">
                 <h3>${props.price}</h3>
-                <Link href='#'>
+                {/* <Link href='#'>
                     <BsFillArrowRightCircleFill fontSize={25} color="#406bde"/>
-                </Link>
+                </Link> */}
                 </div>
             </div>
           </div>
+          </Link>
     )
 }
 
